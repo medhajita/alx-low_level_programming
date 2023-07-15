@@ -2,37 +2,37 @@
 
 /**
  * main - Entry point
- * description: 'Do what you do better... and: do more of what you do...'
+ * Description: The more brains you use, the less material you need
  * Return: Always 0 (Success)
 */
 
 int main(void)
 {
+	int i;
+	int j;
+	int k;
 
-int i;
-int j;
-int z;
-for (i = 0 ; i < 10  ; i++)
-{
-for (j = 0 ; j < 10  ; j++)
-{
-for (z = 0 ; z < 10  ; z++)
-{
-if (i != j  && i < j && j != z && j < z)
-{
-putchar(i + 48);
-putchar(j + 48);
-putchar(z + 48);
-if (i + j != 17 && j + z != 34)
-{
-putchar(44);
-putchar(32);
-}
-}
-}
-}
-}
-putchar('\n');
-return (0);
+	for (i = 48 ; i < 58 ; i++)
+	{
+		for (j = 49 ; j < 58 ; j++)
+		{
+			for (k = 50 ; k < 58 ; k++)
+			{
+				if (k > j && j > i)
+				{
+					putchar(i);
+					putchar(j);
+					putchar(k);
+					if (i != 55 || j != 56)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
 
